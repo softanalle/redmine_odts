@@ -1,3 +1,16 @@
-= odts
+= redmine_odts
 
-Description goes here
+If you  have existing Microsoft  Word or Open Office  documents, which
+you need to transer into Redmine Wiki, then this plugin may help you.
+
+This plugin is used to upload an existing ODT (openoffice) document to
+Redmine  Wiki, so that  each text  paragraph will  create a  Wiki text
+paragraph. In  order to upload  Microsoft Word document, export  it to
+ODT format and upload the ODT document.
+
+Each document will create a new page in Wiki.
+
+Caveats
+
+* Text paragraphs don't support bold and italics format however.
+* Some problems with bullets
