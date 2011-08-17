@@ -8,9 +8,18 @@ Redmine  Wiki, so that  each text  paragraph will  create a  Wiki text
 paragraph. In  order to upload  Microsoft Word document, export  it to
 ODT format and upload the ODT document.
 
-Each document will create a new page in Wiki.
+Each document will create a new page in Wiki. Links in document will
+create links in Wiki -page.
 
-Caveats
+= Requirements
 
-* Text paragraphs don't support bold and italics format however.
+The following programs need to be installed:
+
+* (/usr/bin|/opt/bitnami/common/bin)/xsltproc
+* /usr/bin/unzip
+
+= Caveats
+
+* Text paragraphs don't support bold, underline and italics format however.
 * Some problems with bullets
+

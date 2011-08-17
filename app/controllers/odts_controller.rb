@@ -97,11 +97,19 @@ class OdtsController < ApplicationController
     begin
       xsltfile = Rails.root.join("vendor/plugins/redmine_odts/conv1.xsl")
       tmpfile = "/tmp/xsltoutput.txt"
-      system("/usr/bin/xsltproc -o #{tmpfile} #{xsltfile} #{xmlfile}")
-
+      
+      # we trust here that it is executable
+      if File.exists?("/usr/bin/xsltproc")
+        xsltproc = "/usr/bin/xsltproc"
+      elsif File.exists?("/opt/bitnami/common/bin/xsltproc")
+        xsltproc = "/opt/bitnami/common/bin/xsltproc"
+      end
+      
+      system(xsltproc + " -o #{tmpfile} #{xsltfile} #{xmlfile}")
+      
     rescue Errno::ENOENT => msg
       f = File.new("/tmp/xslt-error.txt", "w")
-      f.write("/usr/bin/xsltproc -o #{tmpfile} #{xsltfile} #{xmlfile}\n\n")
+      f.write( xsltproc + " -o #{tmpfile} #{xsltfile} #{xmlfile}\n\n")
       f.write(msg)
       f.close()
       flash[:error] = msg
