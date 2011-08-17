@@ -1,0 +1,8 @@
+<p><label>XSLT file location</label><%= text_field_tag "settings[xsltfile]", @settings["xsltfile"], :size => 50 %>
+<%= button_to_remote t(:button_test),
+	:url => { :controller => :odts_settings, :action => :test_xsltfile},
+	:with => "'file=' + $('settings_xsltfile').value",
+	:update => "xsltfile-result";
+%>
+
+<div id="xsltfile-result"></div>

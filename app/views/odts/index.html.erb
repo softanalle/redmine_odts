@@ -1,0 +1,9 @@
+<h2>Odts#index</h2>
+
+<% form_tag({:id => @user, :action => 'upload'}, :multipart => true ) do %>
+    <%= hidden_field_tag 'project_id', @project.id %>
+    <%=l(:label_pagetitle) %>: <%= text_field_tag "description" %><br> 
+    <%=l(:label_filename) %>: <%= file_field_tag "filename" %><br/>
+    <%= submit_tag l(:button_save) %>
+<% end %>
+

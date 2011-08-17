@@ -1,0 +1,6 @@
+# Finnish strings go here for Rails i18n
+fi:
+  my_label: "Minun otsikkoni"
+  label_pagetitle: "Sivun otsikko"
+  label_filename:  "Tiedosto"
+  label_errorstext: "Jos virheitä ilmeni, ne ovat yläpuolella. Mikäli virheitä ei näy, kaikki on varmaankin ok."

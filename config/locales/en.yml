@@ -1,0 +1,6 @@
+# English strings go here for Rails i18n
+en:
+  my_label: "My label"
+  label_pagetitle: "Page title"
+  label_filename:  "File"
+  label_errorstext: "If any errors were present, they are above. Otherwise, everything should be ok."
